@@ -2,7 +2,6 @@
 
 ## Overview of Project
 Analyze the kickstarter campaign data in order to determine the outcomes of campaigns in relation to their respective launch dates and funding goals
-### Purpose
 
 ## Analysis and Challenges
 Across both analyses I used several functions including but not limited to: Year, Sum, Countifs & Pivot tables
@@ -60,7 +59,7 @@ Duplicating these formulas for each respective column, F,G & H through cells 3 -
 
 ### Line Chart Creation & Images
 I then Generated a Pivot Line Chart Identifying the Percentage of Successful, Failed & Canceled Kickstarter campaigns when viewed by their Goal ranges listed in Coulmn A - the results of said chart can be found below:
-[Outcomes_vs_Goals](https://github.com/Gkmb2390/kickstarter-analysis/blob/main/Outcomes_vs_Goals.png")
+[Outcomes_vs_Goals](https://github.com/Gkmb2390/kickstarter-analysis/blob/main/Resources/Outcomes_vs_Goals.png)
 
 ### Conclusions for Outcome Based on Goals
  1) The highest rates of successful campaigns were operating on Goals of values equal to or less than $4999.    
