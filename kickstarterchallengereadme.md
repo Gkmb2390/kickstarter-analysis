@@ -49,7 +49,7 @@ The initial formula being updated to refect the "range" listed in A13, i.e. Grea
 
 =COUNTIFS('Kickstarter Data'!$D$2:$D$4115,">=50000",'Kickstarter Data'!$F$2:$F$4115,"Successful",'Kickstarter Data'!$R$2:$R$4115,"plays")
 
-Copying cells B2 - B13 into Columns C & D, updating the formulas to reflect the respective column headers to "Failed" & "Canceled" where "Successful could be found previously - see lines 41,45 & 50
+Copying cells B2 - B13 into Columns C & D, updating the formulas to reflect the respective column headers to "Failed" & "Canceled" where "Successful" could be found previously - see lines 41,45 & 50
 
 ### Sum Formula & Percentages
 Following this I used the SUM function to generate a "Total Projects" Column whose formula from Cell E2 is found: SUM(B2:D2)
