@@ -6,8 +6,10 @@ Analyze the kickstarter campaign data in order to determine the outcomes of camp
 
 ## Analysis and Challenges
 Across both analyses I used several functions including but not limited to: Year, Sum, Countifs & Pivot tables
+
 ### Analysis of Outcomes Based on Launch Date
 I launched a pivot table including the data from the "Kickstarter Data" sheet.  That pivot table is included in the "Theater Outcomes by Launch Date" sheet.  
+
 ### Pivot Table Setup
 The pivot table fields are in the following order: 
     Rows - Date Created Conversion
@@ -16,17 +18,24 @@ The pivot table fields are in the following order:
     Values - Count of Outcomes
 I filtered the table so that Parent Category = Theater.  
 I also set the columns to show their values in Descending Order based on the Outcomes.
+
 ### Line Chart Creation & Images
 After reviewing the pivot table, I created a line chart to review the data linearly over the course of the calendar year, Jan - Dec.  The image of this line chart is included in the resources folder of Week 1 Challenge link provided below:
-    --------INSERT LINK-----------
+ ![Theater_Outcomes_vs_Launch]("C:\Users\gkmb2\msu\kickstarter-analysis\Resources\Theater_Outcomes_vs_Launch.png")
+
 ### Conclusions for Outcomes Based on Launch Dates
 1) Summer Months, May - Jul, saw the greatest number of successful campaigns launched in a given year.
 2) October saw a significant rise in failed kickster campaigns, by comparison to the rest of the year.
 3) Number of Successful campaigns vs Failed campaigns is roughly 2 to 1
 
+
+
+
+
 ### Analysis of Outcomes Based on Goals
 Following step 3 in the setup of Outcomes Based on Goals. I input the Column Headers and Row ranges that were outlined.  
 The requested countif formula necessitated that we only count campaigns according to their respective outcomes in the columns, within the ranges listed in their crossectional rows & that they be only inclusive of the "play" subcategory.
+
 ### Countifs Formulas Outline
 In the first crossection cell,B2, "Number Successful" x "Less than 1000" I input the following formula:
  =COUNTIFS('Kickstarter Data'!$D$2:$D$4115,"<1000",'Kickstarter Data'!$F$2:$F$4115,"Successful",'Kickstarter Data'!$R$2:$R$4115,"plays",'Kickstarter Data'!$R$2:$R$4115,"plays")
@@ -36,7 +45,8 @@ The above formula was duplicated and updated to reflect the ranges respective to
 The initial formula being updated to refect the "range" listed in A13, i.e. Greater than 50000 - formula listed below:
 =COUNTIFS('Kickstarter Data'!$D$2:$D$4115,">=50000",'Kickstarter Data'!$F$2:$F$4115,"Successful",'Kickstarter Data'!$R$2:$R$4115,"plays")
 
-Copying cells B2 - B13 into Columns C & D, updating the formulas to reflect the respective column headers to "Failed" & "Canceled" where "Successful could be found previously - see lines 32,34 & 37
+Copying cells B2 - B13 into Columns C & D, updating the formulas to reflect the respective column headers to "Failed" & "Canceled" where "Successful could be found previously - see lines 41,43 & 46
+
 ### Sum Formula & Percentages
 Following this I used the SUM function to generate a "Total Projects" Column whose formula from Cell E2 is found: SUM(B2:D2)
 I then duplicated the formula in the cells B3-b13
@@ -47,9 +57,10 @@ Failed =C2/$E2
 Canceled =D2/$E2
 
 Duplicating these formulas for each respective column, F,G & H through cells 3 - 13.
+
 ### Line Chart Creation & Images
 I then Generated a Pivot Line Chart Identifying the Percentage of Successful, Failed & Canceled Kickstarter campaigns when viewed by their Goal ranges listed in Coulmn A - the results of said chart can be found below:
--------------Insert Image---------
+[Outcomes_vs_Goals]("C:\Users\gkmb2\msu\kickstarter-analysis\Resources\Outcomes_vs_Goals.png")
 
 ### Conclusions for Outcome Based on Goals
  1) The highest rates of successful campaigns were operating on Goals of values equal to or less than $4999.    
