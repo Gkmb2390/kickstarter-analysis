@@ -37,14 +37,19 @@ The requested countif formula necessitated that we only count campaigns accordin
 
 ### Countifs Formulas Outline
 In the first crossection cell,B2, "Number Successful" x "Less than 1000" I input the following formula:
+ 
  =COUNTIFS('Kickstarter Data'!$D$2:$D$4115,"<1000",'Kickstarter Data'!$F$2:$F$4115,"Successful",'Kickstarter Data'!$R$2:$R$4115,"plays",'Kickstarter Data'!$R$2:$R$4115,"plays")
+
 In the following cell below, i.e. B3 - I adjusted the formula to include numbers in a range of value - respective to those values in A3, the outcome of this adjustment resulted in the following:
+ 
  =COUNTIFS('Kickstarter Data'!$D$2:$D$4115,">=1000",'Kickstarter Data'!$D$2:$D$4115,"<=4999",'Kickstarter Data'!$F$2:$F$4115,"Successful",'Kickstarter Data'!$R$2:$R$4115,"plays")
+
 The above formula was duplicated and updated to reflect the ranges respective to column A, this process repeated through till B12. Only reverting to the initial formula (found in B2 - also found in line 29) for B13.  
 The initial formula being updated to refect the "range" listed in A13, i.e. Greater than 50000 - formula listed below:
+
 =COUNTIFS('Kickstarter Data'!$D$2:$D$4115,">=50000",'Kickstarter Data'!$F$2:$F$4115,"Successful",'Kickstarter Data'!$R$2:$R$4115,"plays")
 
-Copying cells B2 - B13 into Columns C & D, updating the formulas to reflect the respective column headers to "Failed" & "Canceled" where "Successful could be found previously - see lines 41,43 & 46
+Copying cells B2 - B13 into Columns C & D, updating the formulas to reflect the respective column headers to "Failed" & "Canceled" where "Successful could be found previously - see lines 41,45 & 50
 
 ### Sum Formula & Percentages
 Following this I used the SUM function to generate a "Total Projects" Column whose formula from Cell E2 is found: SUM(B2:D2)
@@ -78,7 +83,10 @@ I encountered an issue with the countifs formula for the Outcomes based on Goals
     1) The greatest number of successful campaigns were launched in May, June & July. 
     2) There was a signficant rise in failed campaigns in the Month of October campaigns
 - What can you conclude about the Outcomes based on Goals?
-    The highest success rates for campaigns were for the lowest contribution goals, i.e. Less than 1000.  
+     1) The highest rates of successful campaigns were operating on Goals of values equal to or less than $4999.    
+     2) Second highest success rates were for those campaigns whose goals ranged between 35000 - 44999. Personal Comment - I would have assumed that the rates for successful campaigns were more linear - i.e. more successful at lower goals and less successful for higher goals. 
+    3) The highest failure rates were found amongst thouse campaigns whose goals ranged over 45000
+    4) In consideration to the subcategory of plays - there were no "canceled" kickstarter campaigns. 
 - What are some limitations of this dataset?
     1) Generalizaion of play category & content.  Not all plays discuss similar topics so some content maybe more successful in their kickstarters than others.  
     2) The play writers/actors also can add additional subtext & subjective context for if a campaign was successful.  If a play was written by a famous muscian or play write; or stared a famous actor who might be able to draw noteriatey to the campaign to improve its chances of success.
